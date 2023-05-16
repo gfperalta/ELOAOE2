@@ -88,7 +88,7 @@ async function fetchData(player) {
 }
 
 
-// Agrega un escuchador de evento para el encabezado "Elo"
+/* // Agrega un escuchador de evento para el encabezado "Elo"
 document.getElementById("elo").addEventListener("click", function () {
   if (ordenarPorElo1v1 === false){
     updateUI();
@@ -113,7 +113,7 @@ document.getElementById("elotg").addEventListener("click", function () {
     var spans2 = elo.getElementsByTagName("span");
     spans2[1].style.color = "gray";
   }
-});
+}); */
 
 
 async function updateUI() {
