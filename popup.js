@@ -117,6 +117,8 @@ document.getElementById("elotg").addEventListener("click", function () {
 
 
 async function updateUI() {
+
+  console.log("entro a func updateUI");
   // Ordenar los jugadores
   ordenarPorElo1v1 = !ordenarPorElo1v1;
   const results = await orderPlayers(ordenarPorElo1v1);
