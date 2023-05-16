@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html>
+  <head>
+    <title>ELO AMIGOS DEL AGE</title>
+    <script src="popup.js"></script>
+    <style>
+      body {
+        background-image: url('papel-pergamino.jpg');
+        background-size: cover;
+        font-family: Arial, sans-serif;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>ELO AMIGOS DEL AGE</title>
-  <script src="popup.js"></script>
-  <style>
-    body {
-      background-image: url('papel-pergamino.jpg');
-      background-size: cover;
-      font-family: Arial, sans-serif;
-    }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
 
-    table {
-      border-collapse: collapse;
-      margin: auto;
-    }
+      th,
+      td {
+        border: 1px solid rgb(70, 70, 70);
+        padding: 6px;
+        text-align: center;
+      }
 
-    th,
-    td {
-      border: 1px solid rgb(70, 70, 70);
-      padding: 6px;
-      text-align: center;
-    }
+      th {
+        color: brown;
+        font-weight: bold;
+        font-size: 1em;
+      }
 
-    th {
-      color: brown;
-      font-weight: bold;
-      font-size: 1em;
-    }
+      .container {
+        height: fit-content;
+        width:  max-content;
+      }
+    </style>
+  </head>
 
-    .container {
-      height: fit-content;
-      width:  max-content;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th rowspan="2" title="Puesto del jugador o perfil en Steam">PuestoN</th>
-          <th rowspan="2" title="Nombre del jugador o perfil en aoe2.net">Nombre de Perfil</th>
-          <th colspan="4" title="Estadísticas para partidas individuales (1v1)"><span style="font-size: 1.2em;">Un Jugador (1 Vs 1)</span></th>
-          <th colspan="4" title="Estadísticas para partidas en equipo (TG)"><span style="font-size: 1.2em;">En Equipo (TG)</span></th>
-        </tr>
-        <tr>
-          <th id= "elo" title="Elo actual del jugador en 1v1. Si hace click sobre esta columna se ordenará por el Elo 1v1 de mayor a menor"><span
-              style="color: brown; cursor: pointer;">Elo</span><span style="color: greenyellow; cursor: pointer;">&#9660;</span></th>
-          <th title="Racha de partidas ganadas o perdidas consecutivamente en los últimos juegos en 1v1">Racha</th>
-          <th title="Porcentaje de partidas ganadas en 1v1">Ganadas</th>
-          <th title="Fecha o cantidad de días desde la ultima partida jugada en 1v1">UltimaPartida</th>
-          <th id= "elotg" title="Elo actual del jugador en equipo (TG). Si hace click sobre esta columna se ordenará por el Elo de TG de mayor a menor">
-            <span style="color: brown; cursor: pointer;">Elo</span><span style="color: gray; cursor: pointer;">&#9660;</span>
-          </th>
-          <th title="Racha de partidas ganadas o perdidas consecutivamente en los últimos juegos en equipo (TG)">Racha</th>
-          <th title="Porcentaje de partidas ganadas en equipo (TG)">Ganadas</th>
-          <th title="Fecha o cantidad de días desde la ultima partida jugada en equipo (TG)">UltimaPartida</th>
-        </tr>
-      </thead>
-      <tbody id="playersTableBody">
-      </tbody>
-    </table>
-  </div>
-  <script>
-    updateUI();
-  </script>
-</body>
+  <body>
+    <button onclick="prueba()">Prueba</button>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2" title="Puesto del jugador o perfil en Steam">Puesto</th>
+            <th rowspan="2" title="Nombre del jugador o perfil en aoe2.net">Nombre de Perfil</th>
+            <th colspan="4" title="Estadísticas para partidas individuales (1v1)"><span style="font-size: 1.2em;">Un Jugador (1 Vs 1)</span></th>
+            <th colspan="4" title="Estadísticas para partidas en equipo (TG)"><span style="font-size: 1.2em;">En Equipo (TG)</span></th>
+          </tr>
+          <tr>
+            <th id= "elo" title="Elo actual del jugador en 1v1. Si hace click sobre esta columna se ordenará por el Elo 1v1 de mayor a menor"><span
+                style="color: brown; cursor: pointer;">Elo</span><span style="color: greenyellow; cursor: pointer;">&#9660;</span></th>
+            <th title="Racha de partidas ganadas o perdidas consecutivamente en los últimos juegos en 1v1">Racha</th>
+            <th title="Porcentaje de partidas ganadas en 1v1">Ganadas</th>
+            <th title="Fecha o cantidad de días desde la ultima partida jugada en 1v1">UltimaPartida</th>
+            <th id= "elotg" title="Elo actual del jugador en equipo (TG). Si hace click sobre esta columna se ordenará por el Elo de TG de mayor a menor">
+              <span style="color: brown; cursor: pointer;">Elo</span><span style="color: gray; cursor: pointer;">&#9660;</span>
+            </th>
+            <th title="Racha de partidas ganadas o perdidas consecutivamente en los últimos juegos en equipo (TG)">Racha</th>
+            <th title="Porcentaje de partidas ganadas en equipo (TG)">Ganadas</th>
+            <th title="Fecha o cantidad de días desde la ultima partida jugada en equipo (TG)">UltimaPartida</th>
+          </tr>
+        </thead>
+        <tbody id="playersTableBody">
+        </tbody>
+      </table>
+    </div>
+    <script>
+      function prueba(){
+        updateUI;
+      }
+    </script>
+  </body>
 </html>

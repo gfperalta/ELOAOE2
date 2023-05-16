@@ -210,7 +210,7 @@ async function updateUI() {
   
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
   updateUI();
-  
-});
+} 
+);*/
